@@ -1,0 +1,105 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header header header"
+    "aside form form form form"
+    "footer footer footer footer footer";
+  gap: 15px;
+}
+
+/* Header elements */
+
+header {
+  background-color: #967e7e;
+  grid-area: header;
+  text-align: center;
+}
+
+/* Main elements */
+
+form,
+.top-buttons,
+.note-input,
+.bottom-buttons {
+  display: flex;
+}
+
+aside {
+  background-color: #c0c0c0;
+  grid-area: aside;
+  padding: 5px;
+}
+
+form {
+  background-color: #ebe8e7;
+  grid-area: form;
+  flex-flow: column;
+  padding: 20px;
+}
+
+textarea {
+  width: 85%;
+  height: 85%;
+  resize: none;
+  border-radius:10px;
+  border: 0;
+  padding: 20px;
+}
+
+button {
+  border-radius: 10px;
+  border: 0;
+	color: #ffffff;
+	font-family: Arial;
+	padding: 12px 15px;
+}
+
+[name="New Note"],
+[name="Save"] {
+  background-color:#5f987c;
+}
+
+[name="Dark Theme"] {
+  background-color:#696969;
+}
+
+[name="Cancel"] {
+  background-color:#d23b24;
+}
+
+.top-buttons {
+  justify-content: space-between;
+}
+
+.note-input {
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.bottom-buttons {
+  justify-content: center;
+}
+
+.bottom-buttons button {
+  margin: 0 10px;
+}
+
+/* Footer elements */
+
+footer {
+  background-color: #dcbcb9;
+  grid-area: footer;
+  text-align: center;
+}
+
+.footer-img {
+  height: 35px;
+}
