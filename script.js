@@ -29,6 +29,7 @@ function updateColor() {
     formElem.style.backgroundColor = '#ebe8e7';
     textareaElem.style.backgroundColor = '#ffffff';
     textareaElem.style.color = '#000';
+    allBtns[1].style.color = '#fff';
     for (let i = 0; i < allBtns.length; i++) {
       allBtns[i].style.backgroundColor = oldColor[i];
     }
