@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -6,11 +7,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr 10fr 1fr;
   grid-template-areas:
-    "header header header header header"
-    "aside form form form form"
-    "footer footer footer footer footer";
+    'header header header header header'
+    'aside form form form form'
+    'footer footer footer footer footer';
   gap: 15px;
 }
 
@@ -47,8 +48,9 @@ form {
 textarea {
   width: 85%;
   height: 85%;
+  min-height: 300px;
   resize: none;
-  border-radius:10px;
+  border-radius: 10px;
   border: 0;
   padding: 20px;
 }
@@ -56,26 +58,27 @@ textarea {
 button {
   border-radius: 10px;
   border: 0;
-	color: #ffffff;
-	font-family: Arial;
-	padding: 12px 15px;
+  color: #ffffff;
+  font-family: Arial;
+  padding: 12px 15px;
 }
 
-[name="New Note"],
-[name="Save"] {
-  background-color:#5f987c;
+[name='New Note'],
+[name='Save'] {
+  background-color: #5f987c;
 }
 
-[name="Dark Theme"] {
-  background-color:#696969;
+[name='Dark Theme'] {
+  background-color: #696969;
 }
 
-[name="Cancel"] {
-  background-color:#d23b24;
+[name='Cancel'] {
+  background-color: #d23b24;
 }
 
 .top-buttons {
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .note-input {
@@ -86,6 +89,7 @@ button {
 
 .bottom-buttons {
   justify-content: center;
+  margin-top: 10px;
 }
 
 .bottom-buttons button {
@@ -102,4 +106,19 @@ footer {
 
 .footer-img {
   height: 35px;
+}
+
+/* break point for mobile devices */
+
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      'header'
+      'aside'
+      'form'
+      'footer';
+    gap: 10px;
+  }
 }
